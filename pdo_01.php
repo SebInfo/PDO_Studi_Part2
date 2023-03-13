@@ -23,8 +23,13 @@
                 </tr>
             </thead>
             <?php
-            $req="SELECT nom, prenom FROM acteur";
+            $req="SELECT nom, prenom FROM acteurs";
             $result = $bdd->query($req);
+            if ($result === false)
+            {
+                die("erreur requête !");
+            }
+            var_dump($result);
             while($acteur= $result->fetch())
             {?>
                 <tr>

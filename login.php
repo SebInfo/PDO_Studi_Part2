@@ -8,6 +8,8 @@
     $dsn = "mysql:host=$host;port=$port;dbname=$base;charset=$chrs";
     $opt =
     [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        //PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
+        //PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC,
     ];
 ?>
