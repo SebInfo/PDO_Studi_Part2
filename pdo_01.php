@@ -17,15 +17,15 @@
                 </tr>
             </thead>
             <?php
-            $req="SELECT nom, prenom FROM acteur";
+            $req="SELECT nom, prenom FROM acteur;";
             $result = $bdd->query($req);
             if ($result === false)
             {
                 die("erreur requête !");
             }
-            //var_dump($result);
-            while($acteur= $result->fetch())
-            {?>
+            while($acteur = $result->fetch())
+            {
+                ?>
                 <tr>
                 <td><?= $acteur['nom'] ?></td> 
                 <td><?= $acteur['prenom'] ?></td> 
